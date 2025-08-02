@@ -1,0 +1,20 @@
+# default settings to derive from
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 120
+
+---
+Language: Cpp
+
+PointerAlignment: Left
+DerivePointerAlignment: false
+
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+
+AlignOperands: true
+AlignConsecutiveDeclarations: true
+AlignConsecutiveAssignments: true
+
+BreakConstructorInitializers: BeforeComma
+---

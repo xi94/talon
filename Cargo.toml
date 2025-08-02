@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = ["build-tool", "installer"]
+
+[workspace.metadata]
+name = "talon"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+version = "0.1.0"
+authors = ["xi94"]
+description = "build system for managing C++ projects in a modern and efficient way"
+
+[profile.release]
+lto = "thin"
+strip = true
+opt-level = 3
+codegen-units = 1
+
+[workspace.dependencies]
+hex = "0.4.3"
+sha2 = "0.10.9"
+log  = "0.4.27"
+anyhow = "1.0.98"
+env_logger = "0.11.8"
+clap = { version = "4.5", features = ["derive"] }

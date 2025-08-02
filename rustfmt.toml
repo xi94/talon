@@ -1,0 +1,11 @@
+edition = "2024"
+newline_style = "Unix"
+
+max_width = 120
+use_small_heuristics = "Max" # sets other line based wrap limits to same as 'max_width'
+
+# unstable nightly alignment features
+unstable_features = true
+
+enum_discrim_align_threshold = 30 # not yet tested
+struct_field_align_threshold = 30 # not yet tested
