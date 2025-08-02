@@ -1,6 +1,14 @@
 # talon
 a very incomplete build system for c++
 
+## build instructions
+unix: ```cargo build --release && bin/release/installer```\
+windows: ```cargo build --release && bin\release\installer.exe```
+
+## command line options
+<img width="772" height="419" alt="{65212FFA-B5E4-48CA-85B2-EA8D0F39DE0D}" src="https://github.com/user-attachments/assets/e636064d-6e58-4403-9a92-eb35a1ea5ad9" />
+
+## example build script
 ```c++
 #include <talon/talon.hpp>
 
@@ -31,7 +39,3 @@ auto build(talon::arguments args) -> void {
     workspace.build();
 }
 ```
-
-## build instructions
-unix: ```cargo build --release && bin/release/installer```\
-windows: ```cargo build --release && bin\release\installer.exe```
