@@ -39,37 +39,44 @@ struct workspace {
 
     std::string_view windows_resource_file;
 
-    template <detail::string_view_implicit... Args> inline TALON_API auto add_build_files(Args &&...files) noexcept -> void
+    template <detail::string_view_implicit... Args>
+    inline TALON_API auto add_build_files(Args &&...files) noexcept -> void
     {
         (build_files.push_back(std::forward<Args>(files)), ...);
     }
 
-    template <detail::string_view_implicit... Args> inline TALON_API auto add_source_directories(Args &&...paths) noexcept -> void
+    template <detail::string_view_implicit... Args>
+    inline TALON_API auto add_source_directories(Args &&...paths) noexcept -> void
     {
         (build_file_search_paths.push_back(std::forward<Args>(paths)), ...);
     }
 
-    template <detail::string_view_implicit... Args> inline TALON_API auto add_includes(Args &&...folders) noexcept -> void
+    template <detail::string_view_implicit... Args>
+    inline TALON_API auto add_includes(Args &&...folders) noexcept -> void
     {
         (include_directories.push_back(std::forward<Args>(folders)), ...);
     }
 
-    template <detail::string_view_implicit... Args> inline TALON_API auto add_definitions(Args &&...defs) noexcept -> void
+    template <detail::string_view_implicit... Args>
+    inline TALON_API auto add_definitions(Args &&...defs) noexcept -> void
     {
         (preprocessor_definitions.push_back(std::forward<Args>(defs)), ...);
     }
 
-    template <detail::string_view_implicit... Args> inline TALON_API auto add_library_includes(Args &&...folders) noexcept -> void
+    template <detail::string_view_implicit... Args>
+    inline TALON_API auto add_library_includes(Args &&...folders) noexcept -> void
     {
         (library_include_directories.push_back(std::forward<Args>(folders)), ...);
     }
 
-    template <detail::string_view_implicit... Args> inline TALON_API auto add_libraries(Args &&...libs) noexcept -> void
+    template <detail::string_view_implicit... Args>
+    inline TALON_API auto add_libraries(Args &&...libs) noexcept -> void
     {
         (library_files.push_back(std::forward<Args>(libs)), ...);
     }
 
-    template <detail::string_view_implicit... Args> inline TALON_API auto add_linker_flags(Args &&...flags) noexcept -> void
+    template <detail::string_view_implicit... Args>
+    inline TALON_API auto add_linker_flags(Args &&...flags) noexcept -> void
     {
         (additional_linker_flags.push_back(std::forward<Args>(flags)), ...);
     }
