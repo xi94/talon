@@ -1,20 +1,25 @@
 # default settings to derive from
 BasedOnStyle: LLVM
 IndentWidth: 4
-ColumnLimit: 120
+ColumnLimit: 140
 
 ---
 Language: Cpp
 
-PointerAlignment: Left
+PointerAlignment: Right
 DerivePointerAlignment: false
 
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortIfStatementsOnASingleLine: true
 
-AlignOperands: true
-AlignConsecutiveDeclarations: true
-AlignConsecutiveAssignments: true
+AllowShortLambdasOnASingleLine: All
+AllowShortBlocksOnASingleLine: Always
+AllowShortFunctionsOnASingleLine: None
 
+BreakBeforeBraces: WebKit
 BreakConstructorInitializers: BeforeComma
+
+BraceWrapping:
+  AfterFunction: false
+  BeforeLambdaBody: false
 ---
